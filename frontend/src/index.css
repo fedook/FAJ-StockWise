@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* FAJ Stockwise brand palette: navy primary, medium blue secondary. */
+  --color-brand-50: #f2f7fc;
+  --color-brand-100: #e3eef8;
+  --color-brand-200: #c4dcef;
+  --color-brand-300: #96c0e1;
+  --color-brand-400: #5f9dce;
+  --color-brand-500: #3a80b8;
+  --color-brand-600: #2b669c;
+  --color-brand-700: #24527e;
+  --color-brand-800: #1b3f61;
+  --color-brand-900: #122f4c;
+  --color-brand-950: #0a1f34;
+
+  /* Soft gold accent used sparingly for emphasis and highlights. */
+  --color-accent-50: #fdf8f0;
+  --color-accent-100: #fbefdc;
+  --color-accent-200: #f5dcb4;
+  --color-accent-300: #edc17f;
+  --color-accent-400: #e5a44c;
+  --color-accent-500: #d98b2b;
+  --color-accent-600: #bd701f;
+  --color-accent-700: #9c571d;
+  --color-accent-800: #7e461e;
+  --color-accent-900: #683b1c;
+
+  /* Neutral surfaces and typography. */
+  --color-surface: #f6f8fb;
+  --color-ink-50: #f8fafc;
+  --color-ink-100: #f1f5f9;
+  --color-ink-200: #e2e8f0;
+  --color-ink-300: #cbd5e1;
+  --color-ink-400: #94a3b8;
+  --color-ink-500: #64748b;
+  --color-ink-600: #475569;
+  --color-ink-700: #334155;
+  --color-ink-800: #1e293b;
+  --color-ink-900: #0f172a;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-surface);
+    color: var(--color-ink-800);
+  }
+
+  ::selection {
+    background-color: var(--color-brand-100);
+    color: var(--color-brand-950);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
