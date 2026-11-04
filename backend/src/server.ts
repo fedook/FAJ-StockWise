@@ -5,7 +5,7 @@ import { closeDatabase } from './db/client.js';
 
 const server = createServer(app);
 
-server.listen(env.PORT, () => {
+server.listen(env.PORT, '0.0.0.0', () => {
   console.log(`[server] API listening on http://localhost:${env.PORT}`);
   console.log(`[server] Environment: ${env.NODE_ENV}`);
   console.log(`[server] CORS origin: ${env.FRONTEND_URL}`);
