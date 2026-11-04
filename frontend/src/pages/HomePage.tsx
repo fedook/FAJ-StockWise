@@ -83,7 +83,7 @@ const currentYear = new Date().getFullYear()
  */
 function DashboardPreview() {
   return (
-    <div className="relative mx-auto w-full max-w-[620px]">
+    <div className="relative mx-auto w-full max-w-155">
       <div className="relative overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-xl shadow-brand-950/10">
         <div className="flex items-center justify-between gap-3 border-b border-ink-100 px-4 py-3 sm:px-5 sm:py-4">
           <div className="flex min-w-0 items-center gap-2.5">
@@ -295,22 +295,6 @@ export default function HomePage() {
                   <ChevronRight size={16} aria-hidden />
                 </a>
               </div>
-
-              <ul className="mt-8 grid gap-2.5 text-sm text-ink-600 sm:grid-cols-2">
-                {[
-                  'Real API data only',
-                  'Role-based access',
-                  'Stock audit trail',
-                  'Responsive on every device',
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-700 ring-1 ring-brand-100">
-                      <Check size={12} aria-hidden />
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
 
             <div id="preview" className="scroll-mt-24">
