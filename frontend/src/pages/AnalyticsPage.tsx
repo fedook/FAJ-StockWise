@@ -1,3 +1,4 @@
+   import BAProcessFlow from '../components/BAProcessFlow'
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   AlertTriangle,
@@ -250,6 +251,13 @@ export default function AnalyticsPage() {
 
       {overview && (
         <>
+           <BAProcessFlow
+     overview={overview}
+     topProducts={topProducts}
+     inventory={inventory}
+     forecast={forecast}
+     recommendations={recommendations}
+   />
           <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             <StatCard
               label="Total revenue"
@@ -503,7 +511,7 @@ export default function AnalyticsPage() {
           >
             {lowestProducts.length ? (
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[480px] text-left text-sm">
+                <table className="w-full min-w-120 text-left text-sm">
                   <thead>
                     <tr className="border-b border-ink-200 text-xs font-semibold tracking-wide text-ink-500 uppercase">
                       <th className="px-2 pb-2.5 font-semibold">Product</th>
